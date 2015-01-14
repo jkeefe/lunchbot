@@ -62,8 +62,8 @@ var pick = Math.floor( Math.random() * (lunchSpots.length - 1 ) );
 var payload = {
 	text: "Today, may I suggest *" + lunchSpots[pick].restaurant + "*. It's <" + lunchSpots[pick].location + "|here>.",
 	icon_emoji: ":poultry_leg:",
-	username: "Lunch Bot",
-	channel: "#random"
+	username: "Lunch Bot"
+	// channel: "#random"
 };
 
 var options = {
