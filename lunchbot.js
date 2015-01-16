@@ -2,17 +2,29 @@ var request = require("request"),
 	keys = require('../api_keys/slack_keys');
 	
 /* 
-	The Slack webook URL is something you can get from inside the Slack app
+	Built during John Keefe's #MakeEveryWeek project
+	See http://johnkeefe.net/make-every-week-lunch-bot
+
+	The Slack webook URL used below is something you can get from inside the Slack app
 	to send messages into a Slack channel. Since it's secret, I keep it 
 	in a file outside of this directory structure so I don't accidentally 
-	publish it on Github. I bring it abve as "keys" from a file
+	publish it on Github. I bring it above as "keys" from a file
 	called slack_keys.js. The structure of that file is:
 	
-	var SLACK_WEBHOOK_URL = 'my_consumer_key_url_goes_here';
+	var SLACK_WEBHOOK_URL = 'your_incoming_webhook_url_goes_here';
 
 	    module.exports.SLACK_WEBHOOK_URL = SLACK_WEBHOOK_URL;
-*/
 	
+	If your code is going to stay private, you can skip this by deleting line 2
+	and editing the first part of the options variable below like so:
+	
+	var options = {
+		url: 'https://your-webhook-url-goes-here',
+		...
+	
+*/
+
+// List of restaurants and Google Maps urls as JSON	
 var lunchSpots = [
     {
         "location": "https://www.google.com/maps/dir/160+Varick+Street,+New+York,+NY/The+Kati+Roll+Company,+99+Macdougal+Street,+New+York,+NY+10012/@40.7282033,-74.0055599,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89c259f494b711c5:0xc0df2dedc3840f1e!2m2!1d-74.0053737!2d40.7267926!1m5!1m1!1s0x89c2599227e6cc1b:0xb4d5e12eaca2e69!2m2!1d-74.001022!2d40.729614",
@@ -59,6 +71,7 @@ var lunchSpots = [
 // Pick a number, 0 to the length of the restaurant list less one
 var pick = Math.floor( Math.random() * (lunchSpots.length - 1 ) );
 
+// Compose the message and other details to send to Slack 
 var payload = {
 	text: "Today, may I suggest *" + lunchSpots[pick].restaurant + "*. It's <" + lunchSpots[pick].location + "|here>.",
 	icon_emoji: ":poultry_leg:",
@@ -66,6 +79,8 @@ var payload = {
 	channel: "#random"
 };
 
+// Set up the sending options for the request function.
+// See note about the SLACK_WEBHOOK_URL above.
 var options = {
 	url: keys.SLACK_WEBHOOK_URL,
 	method: 'POST',
