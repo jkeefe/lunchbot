@@ -13,4 +13,4 @@ This is a program written in JavaScript for [Node](http://nodejs.org/), and it u
 	
 ##For More info
 
-Deets on how this came to be, and how to get the incoming webhook URL you need to make this work, can be found in this blog post.
+Deets on how this came to be, and how to get the incoming webhook URL you need to make this work, can be found in [this blog post](http://johnkeefe.net/make-every-week-lunch-bot "Make Every Week: Lunch Bot - johnkeefe.net").
