@@ -35,7 +35,7 @@ var lunchSpots = [
     {
         "location": "https://www.google.com/maps/place/Better+Being+Underground/@40.730283,-74.005134,17z/data=!3m1!4b1!4m2!3m1!1s0x89c25992c2fb95f7:0x34aad58f90284bb7",
         "restaurant": "Better Being Underground",
-        "details": "Today's menu is <a href='https://betterbeingunderground.wordpress.com/'>here</a>. Better hurry, though. They start to run out of things after 1 p.m."
+        "details": "Today's menu is <https://betterbeingunderground.wordpress.com/|here>. Better hurry, though. They start to run out of things after 1 p.m."
     },
     {
         "location": "https://www.google.com/maps/place/Pret+A+Manger/@40.7281277,-74.0072268,17z/data=!4m5!1m2!2m1!1spret+hudson+street!3m1!1s0x0000000000000000:0xe0256475a78a7758",
@@ -73,12 +73,12 @@ var lunchSpots = [
   {
     "location": "https://www.google.com/maps/dir/160+Varick+Street,+New+York,+NY/105+Sullivan+St,+New+York,+NY+10012/@40.7261745,-74.0052145,18z/data=!4m15!4m14!1m5!1m1!1s0x89c259f494b711c5:0xc0df2dedc3840f1e!2m2!1d-74.0053737!2d40.7267926!1m5!1m1!1s0x89c2598c4d0e5f05:0xa53729f0fb2bc38!2m2!1d-74.002715!2d40.72565!3e2!5i1",
     "restaurant": "Alidoro",
-    "details": "Check out <a href='http://static1.squarespace.com/static/5404e243e4b0903f2ff9b289/t/54451692e4b052501dee0932/1413813939525/Alidoro+Soho+Menu.pdf'>their awesome menu</a> of sandwiches. Cash only."
+    "details": "Check out <http://static1.squarespace.com/static/5404e243e4b0903f2ff9b289/t/54451692e4b052501dee0932/1413813939525/Alidoro+Soho+Menu.pdf|their awesome menu> of sandwiches. Cash only."
   },
   {
     "location": "https://www.google.com/maps/dir/160+Varick+St,+New+York,+NY+10013/512+Broome+St,+New+York,+NY+10013/@40.7251625,-74.006966,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c259f494b711c5:0xc0df2dedc3840f1e!2m2!1d-74.0053737!2d40.7267926!1m5!1m1!1s0x89c2598c7ebadf03:0x9b0468cd72a6aa5c!2m2!1d-74.0033839!2d40.7235015!3e2",
     "restaurant": "Pi Bakery",
-    "details": "Be sure to check out their <a href='http://www.pibakerie.com/'>Very Pretty Website</a>."
+    "details": "Be sure to check out their <http://www.pibakerie.com/|Very Pretty Website>."
   }
   
 ];
